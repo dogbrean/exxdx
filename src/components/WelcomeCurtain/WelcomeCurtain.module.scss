@@ -22,7 +22,6 @@
     top: 0;
     left: 50%;
     bottom: 0;
-    transform: translate(-50%, 0);
     width: 1px;
     background-color: #000;
     transition: transform 1.4s ease-in-out;
@@ -40,12 +39,11 @@
     right: 50%;
     left: 0;
     justify-content: flex-end;
-    margin-right: 0.5px;
   }
   .right {
     right: 0;
     left: 50%;
-    margin-left: 0.5px;
+    margin-left: 1px;
   }
   .text_left {
     position: fixed;
@@ -60,7 +58,7 @@
     top: 50%;
     left: 50%;
     font-weight: 500;
-    margin-left: 5px;
+    margin-left: 6px;
     transform: translateY(-50%);
   }
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./RecentLinkTitle.module.scss";
+import styles from "./RecentLinkTitleList.module.scss";
 import cn from "classnames";
 
 const RecentLinkTitleList = () => {
