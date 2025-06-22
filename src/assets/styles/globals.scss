@@ -1,0 +1,10 @@
+@import "./reset.scss";
+@import "./variables";
+@import "./mixins";
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  color: #121212;
+}

@@ -1,0 +1,10 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  .main {
+    margin-top: var(--header-height);
+    padding: 30px 20px;
+    flex: 1 1;
+  }
+}
