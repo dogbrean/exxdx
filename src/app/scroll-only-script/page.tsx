@@ -34,7 +34,10 @@ export default function Page() {
 
   return (
     <div className={styles.wrap}>
-      <h2>iOS 26 스크롤 확인(스크롤해도 주소표시줄이 작아지지 않게 수정)</h2>
+      <h2>
+        iOS 26 스크롤 확인(스크립트로 스크롤 시 주소표시줄 높이차를 반영했으나
+        잘안됨)
+      </h2>
       <div className={styles.box}></div>
       <div className={styles.fixed_bottom}>position: fixed, bottom:0</div>
     </div>
