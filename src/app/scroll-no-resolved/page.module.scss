@@ -1,0 +1,19 @@
+.wrap {
+  min-height: 100svh;
+  height: var(--vvh, 100dvh);
+}
+
+.box {
+  height: 2000px;
+}
+
+.fixed_bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: env(safe-area-inset-bottom, 0px);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+}
