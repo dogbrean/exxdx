@@ -13,12 +13,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 16px 20px;
+    padding: 17px 20px 15px;
     .icon_menu {
       color: #121212;
     }
   }
   .logo {
     font-size: 20px;
+  }
+  .nav {
+    display: none;
   }
 }

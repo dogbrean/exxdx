@@ -12,6 +12,14 @@ const Header = () => {
       <Link href={"/"} className={cn(styles.logo)}>
         □∃xxd(x)
       </Link>
+      <nav className={cn(styles.nav)}>
+        <Link href={"/about"}>ABOUT</Link>
+        <Link href={"/study"}>STUDY</Link>
+        <Link href={"/study"}>STUDY</Link>
+        <Link href={"/memo"}>MEMO</Link>
+        <Link href={"/calender"}>CALENDER</Link>
+        <Link href={"/calender"}>CALENDER</Link>
+      </nav>
     </header>
   );
 };

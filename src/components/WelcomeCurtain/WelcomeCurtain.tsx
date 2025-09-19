@@ -11,9 +11,6 @@ const WelcomeCurtain = () => {
 
   useEffect(() => {
     setIsAnimated(true);
-  }, []);
-
-  useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsVisible(true);
     }, WELCOME_ANIMATION_TIME);
@@ -21,9 +18,7 @@ const WelcomeCurtain = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  return isVisible ? (
-    <></>
-  ) : (
+  return isVisible ? null : (
     <div className={cn(styles.welcome_curtain, isAnimated && styles.animated)}>
       <div className={cn(styles.left)}></div>
       <div className={cn(styles.right)}></div>
