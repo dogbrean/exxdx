@@ -1,4 +1,4 @@
-@import "../../assets/styles/mixins";
+// @import "../../assets/styles/mixins";
 
 @keyframes fadeIn {
   0% {
@@ -38,7 +38,7 @@
         background-color: #000;
         content: "";
       }
-      @include ellipsis(inline-block);
+      // @include ellipsis(inline-block);
       position: relative;
       padding-left: 9px;
       .category {
