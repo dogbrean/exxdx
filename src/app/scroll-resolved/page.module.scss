@@ -1,8 +1,3 @@
-.wrap {
-  min-height: 100svh;
-  height: var(--vvh, 100dvh);
-}
-
 .box {
   height: 2000px;
 }
@@ -17,5 +12,5 @@
   padding: 12px;
   text-align: center;
   /* Safari 툴바 최소화 모드에서 뜨는 갭 보정 */
-  transform: translateY(calc(var(--vh-delta, 0px) * -1));
+  transform: translateY(var(--vh-delta, 0px));
 }
