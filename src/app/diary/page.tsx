@@ -1,4 +1,4 @@
-import Layout from "@/components/layoutt/Layout";
+import Layout from "@/components/layout/Layout";
 
 const Page = () => {
   return <Layout>asdf</Layout>;
