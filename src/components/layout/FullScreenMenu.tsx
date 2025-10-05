@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import cn from "classnames";
-import s from "./FullscreenMenu.module.scss";
+import s from "./FullScreenMenu.module.scss";
 
 type Item = { href: string; label: string };
 
