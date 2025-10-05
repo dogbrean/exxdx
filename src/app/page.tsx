@@ -1,5 +1,5 @@
 import WelcomeCurtain from "@/components/sections/home/welcome-curtain/WelcomeCurtain";
-import Layout from "@/components/layout/Layout";
+import Layout from "@/components/layoutt/Layout";
 import RecentLinkTitleList from "@/components/sections/home/recent/RecentLinkTitleList";
 import styles from "./page.module.scss";
 
