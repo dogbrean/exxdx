@@ -1,0 +1,56 @@
+.button_menu {
+  --size: 24px;
+  --thick: 1.5px;
+  --offset: 5px; /* 위/아래 간격 */
+  --duration: 220ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  width: var(--size);
+  height: var(--size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #121212;
+  border-radius: 999px;
+  opacity: 0.8;
+  transform-origin: 50% 50%;
+  transition: transform var(--duration) var(--ease),
+    width var(--duration) var(--ease), height var(--duration) var(--ease);
+}
+
+/* === 가로 두 줄(=) 상태 === */
+.isPause .bar {
+  width: calc(100% - 6px);
+  height: var(--thick);
+}
+.isPause .bar:nth-child(1) {
+  /* 위쪽 막대 */
+  transform: translate(-50%, calc(-50% - var(--offset))) rotate(0deg);
+}
+.isPause .bar:nth-child(2) {
+  /* 아래쪽 막대 */
+  transform: translate(-50%, calc(-50% + var(--offset))) rotate(0deg);
+}
+
+/* === X 상태 === */
+.isX .bar {
+  width: calc(100% - 6px);
+  height: var(--thick);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.isX .bar:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

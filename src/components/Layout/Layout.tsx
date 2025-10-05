@@ -1,4 +1,4 @@
-import Header from "@components/Header/Header";
+import Header from "./Header";
 import React from "react";
 import styles from "./Layout.module.scss";
 import cn from "classnames";

@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none; /* 닫힌 상태 클릭 막기 */
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #000;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  transition: transform 0.22s ease;
+}
+
+/* 좌/우 패널 (라인 다음 확장) */
+.left,
+.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  width: 0;
+  transition: width 1.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.left {
+  left: 50%;
+}
+.right {
+  right: 50%;
+}
+
+/* 메뉴 컨텐츠 */
+.content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 1s ease 0.26s;
+}
+.nav {
+  display: grid;
+  gap: 20px;
+  text-align: center;
+}
+.link {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 열림 상태 */
+.open {
+  pointer-events: auto;
+}
+.open .line {
+  transform: translateX(-50%) scaleY(1);
+}
+.open .left,
+.open .right {
+  width: 50vw;
+  transition-delay: 0.08s;
+}
+.open .content {
+  opacity: 1;
+}
+
+/* 필요하면 헤더보다 아래/위 조정 */

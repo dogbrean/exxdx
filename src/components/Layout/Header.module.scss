@@ -9,19 +9,7 @@
   height: var(--header-height);
   border-bottom: 1px solid #121212;
   box-sizing: border-box;
-  .button_menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 17px 20px 15px;
-    .icon_menu {
-      color: #121212;
-    }
-  }
   .logo {
     font-size: 20px;
-  }
-  .nav {
-    display: none;
   }
 }

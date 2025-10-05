@@ -1,16 +1,12 @@
-import WelcomeCurtain from "@/components/WelcomeCurtain/WelcomeCurtain";
-import CursorTextAnimation from "@/components/Animation/CursorTextAnimation";
-import Layout from "@/components/Layout/Layout";
-import { WELCOME_ANIMATION_TIME } from "@/constants/ui";
-import RecentLinkTitleList from "@/components/Recent/RecentLinkTitleList";
+import WelcomeCurtain from "@/components/sections/home/welcome-curtain/WelcomeCurtain";
+import Layout from "@/components/layout/Layout";
+import RecentLinkTitleList from "@/components/sections/home/recent/RecentLinkTitleList";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <Layout>
-      <CursorTextAnimation
-        text="RECENT: "
-        animationDelay={WELCOME_ANIMATION_TIME + 200}
-      />
+      <strong className={styles.recent}>RECENT: </strong>
       <RecentLinkTitleList />
       <WelcomeCurtain />
     </Layout>

@@ -44,11 +44,12 @@
   .text_right {
     position: fixed;
     top: 50%;
-    font-weight: 500;
-    transform: translateY(-50%);
     z-index: 2;
-    opacity: 0.9;
+    font-weight: 500;
+    opacity: 0;
     color: #fff;
+    transform: translateY(-50%);
+    transition: opacity cubic-bezier(0.2, 0.8, 0.2, 1) 0.7s;
   }
 
   .text_left {
@@ -67,6 +68,10 @@
     }
     .right {
       transform: translateX(100%);
+    }
+    .text_left,
+    .text_right {
+      opacity: 0.9;
     }
     .line {
       transform: translateY(100%);
