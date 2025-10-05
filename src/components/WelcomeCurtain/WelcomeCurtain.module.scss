@@ -1,6 +1,9 @@
-.curtain {
+.welcome_curtain {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   background: transparent;
   z-index: 9999;
@@ -8,27 +11,33 @@
 
   .left,
   .right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     background: #000;
     height: 100%;
     transition: transform 1.4s cubic-bezier(0.65, 0, 0.35, 1.4) 1.7s;
   }
 
   .left {
+    left: 0;
     width: calc(50% - 0.5px);
   }
 
   .right {
+    right: 0;
     width: calc(50% - 0.5px);
   }
 
   .line {
+    position: absolute;
+    top: 0;
+    left: 50%;
     width: 1px;
     height: 100%;
     background: #000;
-    box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.25); // 빛샘
     transition: transform 1.4s ease-in-out, opacity 0.5s;
-    transform: translateY(0);
-    animation: tremble 0.3s ease-in-out 0.8s 2;
+    transform: translate(-50%);
   }
 
   .text_left,
@@ -39,6 +48,7 @@
     transform: translateY(-50%);
     z-index: 2;
     opacity: 0.9;
+    color: #fff;
   }
 
   .text_left {
@@ -60,32 +70,6 @@
     }
     .line {
       transform: translateY(100%);
-      opacity: 0;
     }
   }
-}
-
-// 진동 애니메이션
-@keyframes tremble {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-1px);
-  }
-  50% {
-    transform: translateY(1px);
-  }
-  75% {
-    transform: translateY(-0.5px);
-  }
-}
-
-.filter-blur {
-  filter: blur(3px);
-  transition: filter 1.4s ease-in-out;
-}
-.filter-clear {
-  filter: blur(0);
 }
